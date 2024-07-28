@@ -27,7 +27,7 @@ class LoginController extends Controller {
         request()->session()->regenerate();
 
         // Redirect
-        return redirect('/');
+        return redirect('/profile');
     }
 
     public function destroy() {

@@ -22,6 +22,11 @@ Route::get('/register', function () {
 
 Route::post('/register', [RegisteredUserController::class, 'store']);
 
-Route::get('/login', [LoginController::class, 'create']);
+Route::get('/login', [LoginController::class, 'create'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy']);
+
+Route::get('/profile', function() {
+    $user = Auth::user(); 
+    return view('profile', ['user' => $user]);
+})->middleware('auth');
