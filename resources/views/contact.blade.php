@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="">
-        <h1 class="text-5xl">Get in touch</h1>
+    <div class="container max-w-[780px] mx-auto">
+        <x-contact-form />
     </div>
 </x-layout>
