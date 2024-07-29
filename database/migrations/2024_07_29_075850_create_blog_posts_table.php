@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('messages', function (Blueprint $table) {
+        Schema::create('blog_posts', function (Blueprint $table) {
             $table->id();
-            $table->string('full_name')->default('');
-            $table->string('email')->default('');
-            $table->string('message')->default('');
+            $table->string('title');
+            $table->string('author');
+            $table->string('meta_description');
+            $table->text('content');
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('messages');
+        Schema::dropIfExists('blog_posts');
     }
 };

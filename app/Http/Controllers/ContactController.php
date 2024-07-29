@@ -13,9 +13,9 @@ class ContactController extends Controller {
     {
         // Validate the incoming request data
         $attributes = request()->validate([
-            'full_name' => 'required|string',
-            'email' => 'required',
-            'message' => 'required|string',
+            'full_name' => ['required'],
+            'email' => ['required'],
+            'message' => ['required'],
         ]);
 
         // Create a new post using the validated data
