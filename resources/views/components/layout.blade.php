@@ -22,6 +22,8 @@
             targetDropdown.classList.toggle('hidden');
         }
     </script>
+    @vite('resources/js/app.js')
+    {{-- <script src="@vite('resources/js/app.js')"></script> --}}
 </body>
 
 </html>

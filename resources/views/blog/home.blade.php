@@ -5,7 +5,7 @@
         <ul class="grid grid-cols-3 gap-5">
             @foreach($posts as $post)
             <li>
-                <a href="/blog/{{$post['id']}}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <a href="/blog/{{$post['slug']}}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <h2 class="text-3xl">{{$post['title']}}</h2>
                     <p>{{$post['meta_description']}}</p>
                 </a>

@@ -46,6 +46,8 @@ Route::get('/blog/create', function() {
     return view('blog/create');
 })->middleware('auth');;
 
-Route::post('/blog/create', [BlogPostsController::class, 'store'])->middleware('auth');;
+Route::get('/blog/{slug}', [BlogPostsController::class, 'show'])->name('blog.show');
+
+Route::post('/blog/create', [BlogPostsController::class, 'store'])->middleware('auth');
 
 

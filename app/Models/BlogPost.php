@@ -16,9 +16,16 @@ class BlogPost extends Model
      */
     protected $fillable = [
         'title',
+        'slug',
         'author',
         'meta_description',
         'content',
         'published_at'
     ];
+
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

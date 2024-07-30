@@ -1,6 +1,6 @@
 <section class="bg-gray-50 dark:bg-gray-900">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <div class="w-screen-xl bg-white rounded-lg shadow dark:border md:mt-0 xl:p-0 dark:bg-gray-800 dark:border-gray-700">
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                 <form class="space-y-4 md:space-y-6" method="POST" action="/blog/create">
                     @csrf
@@ -10,9 +10,20 @@
                         <x-form-error name="title" />
                     </div>
                     <div>
+                        <x-form-label for="slug">Slug</x-form-label>
+                        <input type="text" name="slug" id="slug" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John Doe" required>
+                        <x-form-error name="slug" />
+                    </div>
+                    <div>
                         <x-form-label for="author">Author</x-form-label>
                         <input type="text" name="author" id="author" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John Doe" required>
                         <x-form-error name="author" />
+                    </div>
+                    <div>
+                        <x-form-label for="content">Content</x-form-label>
+                        <textarea type="text" name="content" id="editor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message" required="">
+                        </textarea>
+                        <x-form-error name="content" />
                     </div>
                     <div>
                         <x-form-label for="meta_description">Meta Description</x-form-label>
@@ -20,12 +31,7 @@
                         </textarea>
                         <x-form-error name="meta_description" />
                     </div>
-                    <div>
-                        <x-form-label for="content">Content</x-form-label>
-                        <textarea type="text" name="content" id="content" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message" required="">
-                        </textarea>
-                        <x-form-error name="content" />
-                    </div>
+
                     <div>
                         <x-form-label for="published_at">Published At</x-form-label>
                         <input type="date" name="published_at" id="published_at" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="DD/MM/YYYY" required>

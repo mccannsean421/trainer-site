@@ -15,6 +15,7 @@ class BlogPostsController extends Controller
     public function store() {
         $attributes = request()->validate([
             'title' => ['required'],
+            'slug' => ['required'],
             'author' => ['required'],
             'meta_description' => ['required'],
             'content' => ['required'],
@@ -22,5 +23,10 @@ class BlogPostsController extends Controller
         ]);
 
         BlogPost::create($attributes);
+    }
+
+    public function show($slug) {
+        $post = BlogPost::where('slug', $slug)->firstOrFail();
+        return view('blog/show', compact('post'));
     }
 }
