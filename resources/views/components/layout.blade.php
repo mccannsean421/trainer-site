@@ -3,7 +3,8 @@
 <html>
 
 <head>
-    <title>The Healthy Habit</title>
+    <title>@yield('title', 'The Healthy Habit')</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     @vite('resources/css/app.css')
 </head>
 
@@ -13,9 +14,9 @@
     <x-footer />
 
     <script>
-        function toggleDropdown(event) {
+        function toggleDropdown(targetId) {
             // get reference to the target dropdown
-            const dropdownButton = document.getElementById(event.target.id);
+            const dropdownButton = document.getElementById(targetId);
             const targetDropdown = document.getElementById(dropdownButton.dataset.dropdownToggle);
             
             // toggle the open classes for the dropdown
