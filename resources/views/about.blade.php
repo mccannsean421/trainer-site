@@ -2,8 +2,8 @@
 
 <x-layout>
     <div class="container max-w-xl mx-auto my-24 prose">
-        <h1 class="text-5xl mb-12">About me</h1>
-        <p class="text-gray-700">Hi, I'm [Your Name], a certified personal trainer with over [X] years of experience in helping clients achieve their fitness goals. My passion for health and fitness started at a young age and has grown into a fulfilling career dedicated to transforming lives through exercise and nutrition.</p>
+        <h1 class="text-5xl mb-12 text-[#0053c7]">Hi, I&apos;m Natasha</h1>
+        <p class="text-gray-700 text-xl">I&apos;m a certified personal trainer with experience in helping clients achieve their fitness goals. My passion for health and fitness started at a young age and has grown into a fulfilling career dedicated to transforming lives through exercise and nutrition.</p>
         <div class="clear"></div>
         
         <div class="about-section">
