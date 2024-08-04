@@ -5,7 +5,7 @@
 
     {{-- Training plans overview --}}
     <div class="py-24 bg-white md:mx-48 gap-[40px]">
-        <div class="max-w-6xl grid md:grid-cols-2 mx-auto">
+        <div class="max-w-6xl grid md:grid-cols-2 mx-auto gap-[40px]">
             <div class="grid justify-items-end">
                 <img src="{{asset("images/plans-banner.jpg")}}" alt="Women working out" class="max-w-[480px]"/>
             </div>

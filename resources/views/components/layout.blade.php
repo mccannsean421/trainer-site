@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>@yield('title', 'The Healthy Habit')</title>
+    <title>@yield('title', 'Peraonal Training Kildare | The Healthy Habit')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     @vite('resources/css/app.css')
 </head>
